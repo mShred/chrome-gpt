@@ -6,7 +6,7 @@
 body {
     background-color: #353441;
     font-family: proxima-nova;
-    width:400px;
+    width: 400px;
 }
 
 h1 {
@@ -23,6 +23,15 @@ h1 {
     font-family: proxima-nova;
     margin: 8px 8px 8px 0px;
 
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #1ae61a;
+}
+
+.button:active {
+    background-color: #0f990f;
 }
 
 .editable {
