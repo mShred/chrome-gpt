@@ -87,9 +87,12 @@ const getResponse = async (question) => {
 }
 
 chrome.runtime.onConnect.addListener((port) => {
+
     port.onMessage.addListener((msg) => {
+        const prepended_text = msg.prepended_text
         const question = msg.question
-        getResponse(question).then(async answer => {
+        const query  = prepended_text + question
+        getResponse(query).then(async answer => {
             const resRead = answer.getReader()
             while (true) {
                 const {done, value} = await resRead.read()

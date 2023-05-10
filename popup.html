@@ -10,9 +10,10 @@
 </head>
 <body>
     <h1>select-gpt</h1>
+    <div class="editable" contenteditable="true" id="input_prepend" placeholder="Message to prepend"></div><br/>
     <div class="editable" contenteditable="false" id="input" placeholder="Loading..."></div><br/>
-    <div class="editable" contenteditable="false" id="output"></div>
-
+    <div class="editable" contenteditable="false" id="output" placeholder="Waiting for output..."></div>
+    <button class="button" id="copy_button">Copy</button>
     <script src="./popup.js"></script>
 </body>
 </html>

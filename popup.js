@@ -48,12 +48,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const getData = async (selection) => {
         if (!selection.length == 0) {
+
             document.getElementById('input').style.opacity = 1
             document.getElementById('input').innerHTML = selection
             document.getElementById('output').style.opacity = 0.5
             document.getElementById('output').innerHTML = "Loading..."
+
+            const prepended_text = document.getElementById("input_prepend").innerText 
+
             const port = chrome.runtime.connect();
-            port.postMessage({question: selection})
+            port.postMessage({question: selection, prepended_text: prepended_text})
             port.onMessage.addListener((msg) => showPopup(msg))
         } else {
             document.getElementById('input').style.opacity = 0.5
@@ -66,5 +70,24 @@ document.addEventListener("DOMContentLoaded", async () => {
         chrome.tabs.sendMessage(activeTab.id, {type: "LOAD"}, getData)
     }
 
+    var inputElement = document.getElementById("input_prepend");
+    // Listen for changes to the input element
+    inputElement.addEventListener("input", function(event) {
+    // Save the string to local storage
+        chrome.storage.local.set({prepend_message: event.target.innerText})
+    });
+
+    // set Input value from local storage
+    chrome.storage.local.get(["prepend_message"]).then((result) => {
+        inputElement.innerText = result.prepend_message
+    })
+
     getSelectedText()
+
+    var copyButton = document.getElementById("copy_button");
+    copyButton.addEventListener("click", function() {
+        var inputElement = document.getElementById("output");
+        navigator.clipboard.writeText(inputElement.innerText);
+    });
+    
 })

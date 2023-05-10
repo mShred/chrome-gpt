@@ -7,11 +7,22 @@ body {
     background-color: #353441;
     font-family: proxima-nova;
     width:400px;
-    height:400px;
 }
 
 h1 {
     color: #fff
+}
+
+.button {
+    padding: 1vw;
+    border-radius: 2px;
+    border: 0px;
+    background-color: #16e16e;
+    color: #fff;
+    font-size: 3.75vh;
+    font-family: proxima-nova;
+    margin: 8px 8px 8px 0px;
+
 }
 
 .editable {
