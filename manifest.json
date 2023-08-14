@@ -1,12 +1,12 @@
 {
     "manifest_version": 3,
-    "name": "select-gpt",
+    "name": "chrome-gpt",
     "description": "A chrome extension that lets you select any text and run it through ChatGPT",
     "version": "1.0.0",
     "host_permissions": ["https://*.openai.com/"],
     "permissions": ["storage", "tabs"],
     "icons": {
-        "512": "assets/icons/hexagonal.png"
+        "512": "assets/icons/robot.png"
     },
     "action": {
         "default_popup": "popup.html"
