@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "chrome-gpt",
-    "description": "A chrome extension that lets you select any text and run it through ChatGPT",
+    "description": "A chrome extension that lets you select text and run commands through ChatGPT",
     "version": "1.0.0",
     "host_permissions": ["https://*.openai.com/"],
     "permissions": ["storage", "tabs"],

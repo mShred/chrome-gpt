@@ -4,9 +4,11 @@
 }
 
 body {
-    background-color: #353441;
+    background-color: #15172b;
     font-family: proxima-nova;
-    width: 400px;
+    width: 800px;
+    padding: 1vw;
+    color: #eee;
 }
 
 h1 {
@@ -17,7 +19,7 @@ h1 {
     padding: 1vw;
     border-radius: 2px;
     border: 0px;
-    background-color: #16e16e;
+    background-color: #08d;
     color: #fff;
     font-size: 3.75vh;
     font-family: proxima-nova;
@@ -27,19 +29,19 @@ h1 {
 
 .button:hover {
     cursor: pointer;
-    background-color: #1ae61a;
+    background-color: #145369;
 }
 
 .button:active {
-    background-color: #0f990f;
+    background-color: #145369;
 }
 
 .editable {
     font-family: proxima-nova;
     resize: none;
-    background-color: #454754;
-    color: #D1D5CA;
-    font-size: 3.75vh;
+    background-color: #303245;
+    color: #eee;
+    font-size: 3vh;
     width: 94vw;
     border: 0px;
     border-radius: 2px;

@@ -89,5 +89,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         var inputElement = document.getElementById("output");
         navigator.clipboard.writeText(inputElement.innerText);
     });
+
+    var sendButton = document.getElementById("send_button");
+    sendButton.addEventListener("click", function() {
+        getSelectedText()
+    });
     
 })
